@@ -1,5 +1,6 @@
 package com.exceptionhandling.validation.dto;
 
+import com.exceptionhandling.validation.validation.ValidateGender;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,6 +26,7 @@ public class UserRequest {
     @Email(message = "invalid email ID")
     private String email;
 
+    @ValidateGender
     private String gender;
 
     @Min(value = 10,message = "age cannot be less than 10")
